@@ -1,0 +1,236 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 18, 2016, 9:01:08 PM
+    Author     : TuyenVTT
+*/
+#box-banner-top{
+    position: relative;
+}
+.gift-wrapper{
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+    background: url(../img/event-ftel-20/bg.png) no-repeat top center;
+    background-size: auto 100%;
+    font-size: 16px;
+    font-family: 'SVN-Steady';
+}
+.gift-item{
+    cursor: pointer;
+}
+.gift-right{
+    width: 45%;
+    float: right;
+    text-align: right;
+}
+.gift-left{
+    width: 40%;
+    float: left;
+    text-align: left;
+}
+.gift-item img{
+    max-width: 100%;
+}
+.text-wrapper{
+    width: 30%;
+    min-height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 32%;
+    padding: 5px 0;
+    text-align: center;
+    z-index: 1;
+}
+.text-wrapper img{
+    width: 15%;
+    max-width: 60px;
+    height: auto;
+}
+.text-wrapper .title{
+    font-size: 26px;
+    font-family: 'RobotoCondensed-Bold';
+    color: #2a2a77;
+    margin-top: 10px;
+}
+.text-wrapper .decription{
+    text-align: justify;     
+    padding: 0 45px;  
+}
+.text-wrapper .decription>span{
+    font-size: 20px;
+}
+.text-wrapper .left,
+.text-wrapper .right {
+    width: 30%;
+    height: 80%;
+}
+.text-wrapper .left{
+    -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+    shape-outside: polygon(0 0, 100% 100%, 0 100%);
+    float: left;
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.text-wrapper .right{
+    -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    float: right;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.gift-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    display: none;
+    background: rgba(21, 20, 20, 0.68);
+}
+.gift-info>div{
+    width: 100%;
+    max-width: 767px;
+    min-height: 400px;
+    position: relative;
+}
+.gift-info .close{
+    position: absolute;
+    top: -10px;
+}
+
+#gift-1{
+    background: url(../img/event-ftel-20/coc-su-bg.jpg) no-repeat top left;
+    background-size: 100% 100%;
+}
+#gift-2{
+    background: url(../img/event-ftel-20/hop-da-nang-bg.jpg) no-repeat top left;
+    background-size: 100% 100%;
+    float: right;
+}
+#gift-1 .close{
+    right: -30px;
+}
+#gift-2 .close{
+    left: -30px;
+}
+.gift-info-content{
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
+    font-size: 20px;
+}
+.gift-info-content .btn-select-wrapper{
+    background: url(../img/event-ftel-20/bg-btn.png) no-repeat center center;
+    background-size: 80% auto;
+}
+.gift-info-content .btn-select{
+    padding: 8px 20px;
+    border: 0;
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    background: url(../img/event-ftel-20/btn-dang-ky.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.gift-success-wrapper{
+    width: 100%;
+    max-width: 900px;
+    min-height: 400px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    background: url(../img/event-ftel-20/success-bg.png) no-repeat top right;
+    background-size: auto 100%;
+    font-size: 14px;
+    font-family: 'Roboto-Light';
+}
+.gift-success-wrapper .title{
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 23px;
+    color: #231f54;
+}
+.gift-success-wrapper>div{
+    padding: 30px;
+    width: 50%;
+}
+.gift-success-wrapper ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 20px;
+}
+#gift-modal .modal-content{
+    width: 100%;
+    max-width: 600px;
+}
+.text-full-wraper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-shadow: 2px 1px 1px #fff;
+}
+@media(max-width: 1200px){
+    .text-wrapper{
+        padding: 10px 0;
+    }
+    .text-wrapper img{
+        width: 12%;
+    }
+    .text-wrapper .title{
+        font-size: 18px;
+    }
+    .text-wrapper .decription{   
+        padding: 0 50px;  
+    }
+}
+@media(max-width: 1000px){
+    .text-wrapper{
+        width: 100%;
+        position: relative;
+        float: left;
+        left: 0;
+        text-align: center!important;
+    }
+    .text-full-wraper{
+        width: 100%;
+        position: relative;
+        float: left;
+    }
+    .text-wrapper img{
+        position: absolute;
+        bottom: -100px;
+        left: 42%;
+    }
+    .text-wrapper .decription{  
+        padding: 0;
+    }
+    .gift-wrapper{
+        background: none;
+        padding: 0 15px;
+        background: url(../img/event-ftel-20/logo.png) no-repeat center center;
+    }
+}
+@media(max-width: 767px){
+    .gift-info-content p{
+        background: rgba(255, 251, 240, 0.54);
+    }
+    .gift-success-wrapper{
+        background: none;
+        border: 5px #69a84e solid;
+    }
+    .gift-success-wrapper>div{
+        padding: 20px;
+        width: 100%;
+    }
+    .gift-success-wrapper .title{
+        font-size: 20px;
+    }
+}

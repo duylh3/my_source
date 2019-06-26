@@ -1,0 +1,162 @@
+.sliderPhoto,
+.sliderVideo{
+    padding: 0;
+    margin: 0;
+}
+.bx-wrapper .bx-viewport{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    left: 0;
+}
+.bx-wrapper .bx-controls-direction a {
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+.mobile{
+    display: none;
+}
+.bx-wrapper .bx-next, .bx-wrapper .bx-next:hover {
+    right: 10px;
+    background: url(../img/icon/a-right-slide.png) no-repeat;
+}
+.bx-wrapper .bx-prev, .bx-wrapper .bx-prev:hover {
+    left: 10px;
+    background: url(../img/icon/a-left-slide.png) no-repeat;
+}
+.kc-wrap{
+    height: 410px;
+    padding-bottom: 0;
+    background: none;
+}
+.kc-item img {
+    position:absolute;
+    /*pointer-events: none;*/
+    width:100%;    
+    z-index: 1;
+    width: 660px;
+    height: 400px;
+    cursor: pointer;
+}
+.mobile .kc-content{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: block;
+}
+.kc-content{
+    position:absolute;
+    width: 90%;
+    width: 660px;
+    height: 400px;
+    z-index: 2;
+    padding: 20px;
+    padding-right: 10%;
+    background: none;
+    background-size: 100% auto;
+    color: white;
+    display: block;
+}
+.kc-wrap-content{
+    display: none;
+}
+.kc-front-item .kc-content{
+    /*background: url(../img/icon/mask-backgroud.png) repeat-y left top;*/
+}
+.kc-front-item .kc-wrap-content{
+    display: block;
+}
+.kc-content:hover,
+.kc-content:focus,
+.kc-content:active{
+    color: white;
+    text-decoration: none;
+}
+.kc-wrap-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+a.kc-content:hover{
+    color:#FFEFDD;
+}
+.kc-content .title{
+    text-transform: uppercase;
+    font-size: 35px;
+    position: absolute;
+    line-height: 40px;
+    bottom: 60px;
+    height: 90px;
+    overflow: hidden;
+    font-family: 'UTM-alter-gothic';
+}
+.kc-content .info{
+    font-size: 15px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    font-family: 'UTM-CenturItalic';
+}
+.ellipsis{
+    display: block;
+}
+/*.kc-wrap>div[style="position: absolute; left: 10px; bottom: 10px; z-index: 100000; visibility: visible; display: block; color: rgb(255, 255, 255); text-shadow: none; font-family: sans-serif; font-size: 10px; font-weight: bold; padding: 2px; border: 1px solid rgb(68, 0, 0); background-color: rgb(221, 0, 0);"]{
+    display: none!important;
+    visibility: hidden!important;
+}*/
+.kc-horizon + div{
+    display: none!important;
+    visibility: hidden!important;
+}
+.kc-item{
+    width: 660px!important;
+    height: 400px!important;
+    border: 1px #dedede solid;
+}
+
+.bx-wrapper img {
+    width:100%;
+}
+.slider-title{    
+/*    padding: 5px 10px; */
+    font-size: 12px;
+    margin-bottom: 0;
+}
+@media(max-width: 1100px){
+    .kc-wrap{
+        height: 390px;
+    }
+}
+@media(max-width: 991px){
+    .kc-wrap{
+        height: 350px;
+    }
+}
+@media(max-width: 850px){
+    .kc-wrap{
+        height: 300px;
+    }
+}
+@media(max-width: 767px){
+    .kc-wrap{
+        height: 270px;
+    }
+}
+@media(max-width: 600px){
+    .kc-wrap{
+        height: 230px;
+    }
+}
+@media(max-width: 500px){
+    .kc-wrap{
+        height: 200px;
+    }
+}
+@media(max-width: 400px){
+    .kc-wrap{
+        height: 160px;
+    }
+}

@@ -1,0 +1,54 @@
+$(document).ready(function () {
+    $(".kc-content .title").dotdotdot();
+    $('.sliderPhoto').bxSlider({
+        mode: 'fade',
+        captions: true,
+        pager: false,
+        infiniteLoop: true,
+        auto: true
+    });
+    $('.sliderVideo').bxSlider({
+        mode: 'fade',
+        captions: true,
+        pager: false,
+        infiniteLoop: true,
+        auto: true
+    });
+    var md = new MobileDetect(window.navigator.userAgent);
+    if (md.phone() == null) {
+        $('.kc-wrap').KillerCarousel({
+            // Default natural width of carousel.
+            width: 1000,
+            // Item spacing in 3d (has CSS3 3d) mode.
+            spacing3d: 160,
+            // Item spacing in 2d (no CSS3 3d) mode. 
+            spacing2d: 160,
+            // Looping mode.
+            infiniteLoop: true,
+            // Scale at 85% of parent element.
+            autoScale: 85,
+            itemAlign: "middle",
+            autoChangeDelay: 4000,
+            useMouseWheel: false,
+//            autoChangeDirection: 1
+        });
+    }
+    else {
+        $('.kc-wrap').KillerCarousel({
+            // Default natural width of carousel.
+            width: 600,
+            // Item spacing in 3d (has CSS3 3d) mode.
+            spacing3d: 200,
+            // Item spacing in 2d (no CSS3 3d) mode. 
+            spacing2d: 200,
+            // Looping mode.
+            infiniteLoop: true,
+            // Scale at 85% of parent element.
+            autoScale: 85,
+            itemAlign: "middle",
+            autoChangeDelay: 4000,
+            useMouseWheel: false,
+            autoChangeDirection: 1
+        });
+    }
+});
