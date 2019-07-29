@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống quản lí ý kiến nhân viên</title>
+    @* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">*@
+    <!-- Font Awesome CSS -->
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container">
+        <div class="img-responsive">
+            <img src="~/Resources/images/posco.png" class="img-header" />
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <form class="form-inline" id="formSearch">
+                        <div class="col-md-12 input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nhập nội dung cần tìm kiếm" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="button-addon2"><span class="fa fa-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row padding-left">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary"><strong style="font-size:larger">I. Q&A/VOC của nhân viên</strong></a>
+                        <a href="/QA/CauHoi" class="list-group-item list-group-item-action list-group-item-primary" id="HR"><i class="fa fa-circle"></i><strong> Câu hỏi liên quan nhân sự </strong><span class="badge badge-light"> 6</span></a>
+                        <a href="/QA/CauHoi" class="list-group-item list-group-item-action list-group-item-primary ul-style" id="Salary">   - Tiền lương</a>
+                        <a href="/QA/ChamCong" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Chấm công</a>
+                        <a href="/QA/TangCa" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Tăng ca</a>
+                        <a href="/QA/DanhGia" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Đánh giá</a>
+                        <a href="/QA/BaoHiem" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Bảo hiểm</a>
+                        <a href="/QA/HRKhac" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Khác</a>
+                        <a href="/QA/PhucLoi" class="list-group-item list-group-item-action list-group-item-primary"><i class="fa fa-circle"></i><strong> Câu hỏi liên quan phúc lợi </strong></a>
+                        <a href="/QA/DaoDuc" class="list-group-item list-group-item-action list-group-item-primary"><i class="fa fa-circle"></i><strong> Khai báo vi phạm chuẩn mực đạo đức </strong></a>
+                        <a href="/QA/KhoKhan" class="list-group-item list-group-item-action list-group-item-primary"><i class="fa fa-circle"></i><strong> Khó khăn của nhân viên </strong></a>
+                        <a href="/QA/Khac" class="list-group-item list-group-item-action list-group-item-primary"><i class="fa fa-circle"></i><strong> Các câu hỏi liên quan khác </strong></a>
+
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary"><strong style="font-size:larger">I. Tài liệu tham khảo</strong></a>
+                        <a href="/QA/PhapLuat" class="list-group-item list-group-item-action list-group-item-primary"><i class="fa fa-circle"></i><strong> Pháp luật Việt Nam </strong><span class="badge badge-light"> 3</span></a>
+                        <a href="/QA/LaoDong" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Luật lao động</a>
+                        <a href="/QA/BaoHiem" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Luật bảo hiểm</a>
+                        <a href="/QA/Thue" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Luật thuế</a>
+                        <a href="/QA/Rule" class="list-group-item list-group-item-action list-group-item-primary"><i class="fa fa-circle"></i><strong> Quy định công ty </strong><span class="badge badge-light"> 4</span></a>
+                        <a href="/QA/RuleNhanSu" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Quy định nhân sự</a>
+                        <a href="/QA/RuleAnToan" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Quy định an toàn</a>
+                        <a href="/QA/RuleThongTin" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Quy định bảo mật thông tin</a>
+                        <a href="/QA/RuleDaoDuc" class="list-group-item list-group-item-action list-group-item-primary ul-style">   - Quy định chuẩn mực đạo đức</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                @RenderBody()
+            </div>
+        </div>
+       
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ICT Team</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>*@
+</body>
+</html>
